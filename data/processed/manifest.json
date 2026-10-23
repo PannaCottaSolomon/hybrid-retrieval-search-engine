@@ -1,0 +1,243 @@
+{
+  "created_utc": "2026-10-23T06:46:17+00:00",
+  "data_source": {
+    "beir": "cached",
+    "original": "cached"
+  },
+  "split_map_beir_to_original": {
+    "train": "train",
+    "test": "dev"
+  },
+  "doc_sep": " ",
+  "counts": {
+    "docs": 5183,
+    "queries": 1109,
+    "train_eval_queries": 809,
+    "test_eval_queries": 300,
+    "train_qrel_pairs": 919,
+    "test_qrel_pairs": 339,
+    "train_pairs_with_evidence": 564,
+    "test_pairs_with_evidence": 209,
+    "evidence_sentence_rows": 1391,
+    "annotated_pairs_not_in_qrels": 0
+  },
+  "files": {
+    "corpus": {
+      "path": "data/processed/corpus.parquet",
+      "sha256": "9e47fc001197def7958f6d166ac9651338fbb3521d86f78a1bd9f8418dac50e5"
+    },
+    "queries": {
+      "path": "data/processed/queries.parquet",
+      "sha256": "543847f9f9f9d8cb53a20e6b0420a0e9bad6f379034bd7ac4b8a97bb471a3cbb"
+    },
+    "qrels": {
+      "path": "data/processed/qrels.parquet",
+      "sha256": "8a9a5b4f075f56ac4fbf3ab3e9e38945bcbc359a5c0645de1a61531934c92f55"
+    },
+    "qrel_pairs": {
+      "path": "data/processed/qrel_pairs.parquet",
+      "sha256": "077017ff687ad5703a71c74456827a48dc353d2552dc9a9174ac57e0fb77f10b"
+    },
+    "evidence_sentences": {
+      "path": "data/processed/evidence_sentences.parquet",
+      "sha256": "feb518a8525409fbecc98d9c9282d892d3de105294dee7bbad52cddb156aa666"
+    }
+  },
+  "raw_sha256": {
+    "data/raw/beir/scifact/corpus.jsonl": "dec31c8182f3d744c7d2c09423756fd1d17cbef75808db13ba01cc0aab4d1ac6",
+    "data/raw/beir/scifact/queries.jsonl": "8ff84a7c903f722981cd8d595c022660140c51867b27608a6d4910db86080313",
+    "data/raw/beir/scifact/qrels/train.tsv": "a53f2114831916c096b6c37d9e54da68cef4efdcdbd5ed46533601af972acf1d",
+    "data/raw/beir/scifact/qrels/test.tsv": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c",
+    "data/raw/scifact_original/data/corpus.jsonl": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+    "data/raw/scifact_original/data/claims_train.jsonl": "f4c8fa82d8bd0653a9cc8d61a6ea48c25eacea64e90af5dbf390ebb1b74372f0",
+    "data/raw/scifact_original/data/claims_dev.jsonl": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217",
+    "data/raw/scifact_original/data/claims_test.jsonl": "558930d75215c73f84a28fe538307d6d397c9de1ec7239514cf45f80d75d2ca3"
+  },
+  "checks": [
+    {
+      "check": "raw file present: data/raw/beir/scifact/corpus.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/beir/scifact/queries.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/beir/scifact/qrels/train.tsv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/beir/scifact/qrels/test.tsv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/scifact_original/data/corpus.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/scifact_original/data/claims_train.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/scifact_original/data/claims_dev.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/scifact_original/data/claims_test.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "BEIR corpus size",
+      "status": "PASS",
+      "detail": "5183 vs 5183"
+    },
+    {
+      "check": "Original corpus size",
+      "status": "PASS",
+      "detail": "5183 vs 5183"
+    },
+    {
+      "check": "BEIR queries",
+      "status": "PASS",
+      "detail": "1109 vs 1109"
+    },
+    {
+      "check": "BEIR test queries with qrels",
+      "status": "PASS",
+      "detail": "300 vs 300"
+    },
+    {
+      "check": "Original train claims",
+      "status": "PASS",
+      "detail": "809 vs 809"
+    },
+    {
+      "check": "Original dev claims",
+      "status": "PASS",
+      "detail": "300 vs 300"
+    },
+    {
+      "check": "Original test claims",
+      "status": "PASS",
+      "detail": "300 vs 300"
+    },
+    {
+      "check": "corpus doc_id sets identical (BEIR vs original)",
+      "status": "PASS",
+      "detail": "only-BEIR=0, only-original=0"
+    },
+    {
+      "check": "BEIR title == original title (whitespace-normalised)",
+      "status": "PASS",
+      "detail": "100.00% match"
+    },
+    {
+      "check": "BEIR text == ' '.join(original abstract sentences)",
+      "status": "PASS",
+      "detail": "100.00% match"
+    },
+    {
+      "check": "every BEIR query_id exists in original claims",
+      "status": "PASS",
+      "detail": "0 missing"
+    },
+    {
+      "check": "BEIR query text == original claim text",
+      "status": "PASS",
+      "detail": "100.00% match"
+    },
+    {
+      "check": "BEIR train queries all come from original train",
+      "status": "PASS",
+      "detail": "809/809"
+    },
+    {
+      "check": "BEIR test queries all come from original dev",
+      "status": "PASS",
+      "detail": "300/300"
+    },
+    {
+      "check": "BEIR test \u2194 original dev (expected)",
+      "status": "PASS",
+      "detail": "SPLIT_MAP={'train': 'train', 'test': 'dev'}"
+    },
+    {
+      "check": "all abstract sentences located in doc_text",
+      "status": "PASS",
+      "detail": "0/45952 not located"
+    },
+    {
+      "check": "every doc has sentence segmentation",
+      "status": "PASS",
+      "detail": "0 docs without sentences"
+    },
+    {
+      "check": "every qrel doc exists in corpus",
+      "status": "PASS",
+      "detail": "0 missing"
+    },
+    {
+      "check": "no duplicate qrel rows",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no query appears in both train and test qrels",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "evidence sentence indices are within the abstract",
+      "status": "PASS",
+      "detail": "0 pairs out of range"
+    },
+    {
+      "check": "all evidence spans located in doc_text",
+      "status": "PASS",
+      "detail": "0 pairs with unlocated spans"
+    },
+    {
+      "check": "doc_text[char_start:char_end] == evidence sentence",
+      "status": "PASS",
+      "detail": "0 mismatches"
+    },
+    {
+      "check": "one label per (claim, doc) pair",
+      "status": "PASS",
+      "detail": "0 pairs with mixed labels"
+    },
+    {
+      "check": "every evidence annotation (mapped splits) appears in BEIR qrels",
+      "status": "PASS",
+      "detail": "0 annotated pairs not in qrels"
+    },
+    {
+      "check": "every rationale-free qrel pair is a cited doc of its claim",
+      "status": "PASS",
+      "detail": "485 such pairs, 0 not cited \u2014 kept for retrieval eval, excluded from the evidence diagnostic"
+    }
+  ],
+  "environment": {
+    "timestamp_utc": "2026-10-23T06:46:09+00:00",
+    "python": "3.11.8",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "cpu_count": 12,
+    "numpy": "1.26.3",
+    "pandas": "2.1.1",
+    "torch": "2.14.0",
+    "cuda": null,
+    "mps": true,
+    "transformers": "4.57.6",
+    "sentence_transformers": "5.7.0",
+    "rank_bm25": null
+  }
+}

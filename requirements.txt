@@ -1,0 +1,27 @@
+# LibBOT — IS424 G2T5
+# Install:  pip install -r requirements.txt
+# Python 3.10+ recommended.
+
+# Core
+numpy>=1.26
+pandas>=2.1
+pyarrow>=14          # parquet files in data/processed and results/runs
+matplotlib>=3.8
+tqdm>=4.66
+
+# Retrieval
+rank-bm25==0.2.2                 # Member 3
+sentence-transformers>=3.0       # Members 4, 5 (all-MiniLM-L6-v2)
+transformers>=4.40               # tokenizer offsets for the truncation diagnostic
+torch>=2.2
+
+# Only used if the direct SciFact downloads fail and we fall back to Hugging Face
+datasets>=2.19
+
+# Stats / demo
+scipy>=1.11                      # Member 6 (bootstrap helpers, optional)
+streamlit>=1.35                  # Member 6 demo
+
+# Notebook + git hygiene
+jupyter
+nbstripout                       # strips outputs before commit -> fewer merge conflicts

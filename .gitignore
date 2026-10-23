@@ -1,0 +1,27 @@
+# Downloaded raw data (re-created by Section 2 of the notebook)
+data/raw/*
+!data/raw/.gitkeep
+
+# Embedding caches / indexes (large; re-created by Sections 3–5)
+cache/*
+!cache/.gitkeep
+*.npy
+*.npz
+*.faiss
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# NOTE: data/processed/ and results/ ARE committed on purpose (small files),
+# so teammates can start from Checkpoint A without re-downloading SciFact.
