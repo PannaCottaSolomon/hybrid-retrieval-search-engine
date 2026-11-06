@@ -1,0 +1,305 @@
+{
+  "created_utc": "2026-11-06T03:39:29+00:00",
+  "config": {
+    "SEED": 42,
+    "K": 10,
+    "RUN_DEPTH": 1000,
+    "MODEL_NAME": "sentence-transformers/all-MiniLM-L6-v2",
+    "MAX_SEQ_LEN": 256,
+    "DOC_SEP": " ",
+    "ALPHA_GRID": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "METHODS": [
+      "bm25",
+      "prefix_minilm",
+      "window_minilm",
+      "hybrid_prefix",
+      "hybrid_window"
+    ],
+    "SPLITS": [
+      "train",
+      "test"
+    ]
+  },
+  "environment": {
+    "timestamp_utc": "2026-11-05T02:50:52+00:00",
+    "python": "3.13.0",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "cpu_count": 16,
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "torch": "2.15.0+cpu",
+    "cuda": null,
+    "mps": false,
+    "transformers": "5.22.1",
+    "sentence_transformers": "6.2.0",
+    "rank_bm25": null
+  },
+  "split_map_beir_to_original": {
+    "train": "train",
+    "test": "dev"
+  },
+  "files": {
+    "results\\runs\\bm25__train.parquet": {
+      "sha256": "857a86fe2d57c9143660558316bb575c41ade5264c3cb2d186ca651b54543f02",
+      "size_bytes": 7733403
+    },
+    "results\\runs\\bm25__test.parquet": {
+      "sha256": "f75dd5f173f435e1545e3477cd7116fb1c2aa2b841e868d4fd44d7cd6608c176",
+      "size_bytes": 2908285
+    },
+    "results\\runs\\prefix_minilm__train.parquet": {
+      "sha256": "33ef7ac0fed25ddb22a7a830d3831cebd7db633e9104fb81548bbadfbe1db3e8",
+      "size_bytes": 6421181
+    },
+    "results\\runs\\prefix_minilm__test.parquet": {
+      "sha256": "84db0d0c130ea9575e3b048e047dfb4e97b779573cec9042f2ee44c3361d809c",
+      "size_bytes": 2580906
+    },
+    "results\\runs\\window_minilm__train.parquet": {
+      "sha256": "6f4a55c08f9917f4949f30014c7cfc7feed94c24db61207efadced07a464acb4",
+      "size_bytes": 6407848
+    },
+    "results\\runs\\window_minilm__test.parquet": {
+      "sha256": "2f8c94cae8d70bcc3e5fa91a13e6dbe35afd48d84d65bf7d9a6501af2738c4c6",
+      "size_bytes": 2575737
+    },
+    "results\\runs\\hybrid_prefix__train.parquet": {
+      "sha256": "81b019248b3a1581748b15dd1bb613169591549bdf34785e40267cb9a32e54b3",
+      "size_bytes": 8229003
+    },
+    "results\\runs\\hybrid_prefix__test.parquet": {
+      "sha256": "6fd827a443c9f51b633c419ef578da718cbbc5098291cbb3d1854000824814f2",
+      "size_bytes": 3242206
+    },
+    "results\\runs\\hybrid_window__train.parquet": {
+      "sha256": "c6f0f4bc2108b4c6492ab99d73e34ff42c49fcb08a57c83e2f8d680622356118",
+      "size_bytes": 8227069
+    },
+    "results\\runs\\hybrid_window__test.parquet": {
+      "sha256": "fafa8cef3bc4936dc3f5f70f148a697c36d2618dd1bce0b63f0cb343d9be7461",
+      "size_bytes": 3242253
+    },
+    "results\\frozen_alphas.json": {
+      "sha256": "c9455fbbe4116e724df4b89ae6339c3e2f648b0a4763488ddc171fb5393befd1",
+      "size_bytes": 216
+    },
+    "results\\metrics\\alpha_sweep.parquet": {
+      "sha256": "35f98719fe7a633a2cbf21f5d7f475b2a1730b0924e03f2efb57ccb65a356c3b",
+      "size_bytes": 3873
+    },
+    "results\\metrics\\per_query__test.parquet": {
+      "sha256": "39407f616b800390fff956c089f3b74e319407e21c8a9f366ef2f03dca16c979",
+      "size_bytes": 7108
+    },
+    "results\\metrics\\summary__test.csv": {
+      "sha256": "2be90f878d63338e8c18d8444542846acca4223a6f7642adf10708daae1a47a9",
+      "size_bytes": 297
+    },
+    "results\\metrics\\efficiency_summary.csv": {
+      "sha256": "85f4a7356ff2d0772b727537a3cd88ddfddf5ea50ac8efa792b2d31075476f37",
+      "size_bytes": 635
+    },
+    "results\\metrics\\bootstrap_ci.csv": {
+      "sha256": "6e99a6acc97b7280f169db7f00d71df86c0085182fc3ffc5ac478971da6b41a6",
+      "size_bytes": 1499
+    },
+    "results\\metrics\\final_table.csv": {
+      "sha256": "21bf59bf2f03d910ae031062c6f3bc580b870a386ccc29683920a05489a8ae6b",
+      "size_bytes": 924
+    },
+    "results\\metrics\\diagnostic_records.parquet": {
+      "sha256": "d019a01b1fb52315cc64a7e45ffc6a4bb100b3e1e85b85f8a667985bdf726a5c",
+      "size_bytes": 137122
+    },
+    "results\\demo_manifest.json": {
+      "sha256": "8cdedfbd7609da4f171202648083eccada88eb1e68a8f7bd50b273b76cba4672",
+      "size_bytes": 952
+    }
+  },
+  "checks": [
+    {
+      "check": "raw file present: data/raw/beir/scifact/corpus.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/beir/scifact/queries.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/beir/scifact/qrels/train.tsv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/beir/scifact/qrels/test.tsv",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/scifact_original/data/corpus.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/scifact_original/data/claims_train.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/scifact_original/data/claims_dev.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "raw file present: data/raw/scifact_original/data/claims_test.jsonl",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "BEIR corpus size",
+      "status": "PASS",
+      "detail": "5183 vs 5183"
+    },
+    {
+      "check": "Original corpus size",
+      "status": "PASS",
+      "detail": "5183 vs 5183"
+    },
+    {
+      "check": "BEIR queries",
+      "status": "PASS",
+      "detail": "1109 vs 1109"
+    },
+    {
+      "check": "BEIR test queries with qrels",
+      "status": "PASS",
+      "detail": "300 vs 300"
+    },
+    {
+      "check": "Original train claims",
+      "status": "PASS",
+      "detail": "809 vs 809"
+    },
+    {
+      "check": "Original dev claims",
+      "status": "PASS",
+      "detail": "300 vs 300"
+    },
+    {
+      "check": "Original test claims",
+      "status": "PASS",
+      "detail": "300 vs 300"
+    },
+    {
+      "check": "corpus doc_id sets identical (BEIR vs original)",
+      "status": "PASS",
+      "detail": "only-BEIR=0, only-original=0"
+    },
+    {
+      "check": "BEIR title == original title (whitespace-normalised)",
+      "status": "PASS",
+      "detail": "100.00% match"
+    },
+    {
+      "check": "BEIR text == ' '.join(original abstract sentences)",
+      "status": "PASS",
+      "detail": "100.00% match"
+    },
+    {
+      "check": "every BEIR query_id exists in original claims",
+      "status": "PASS",
+      "detail": "0 missing"
+    },
+    {
+      "check": "BEIR query text == original claim text",
+      "status": "PASS",
+      "detail": "100.00% match"
+    },
+    {
+      "check": "BEIR train queries all come from original train",
+      "status": "PASS",
+      "detail": "809/809"
+    },
+    {
+      "check": "BEIR test queries all come from original dev",
+      "status": "PASS",
+      "detail": "300/300"
+    },
+    {
+      "check": "BEIR test \u2194 original dev (expected)",
+      "status": "PASS",
+      "detail": "SPLIT_MAP={'train': 'train', 'test': 'dev'}"
+    },
+    {
+      "check": "all abstract sentences located in doc_text",
+      "status": "PASS",
+      "detail": "0/45952 not located"
+    },
+    {
+      "check": "every doc has sentence segmentation",
+      "status": "PASS",
+      "detail": "0 docs without sentences"
+    },
+    {
+      "check": "every qrel doc exists in corpus",
+      "status": "PASS",
+      "detail": "0 missing"
+    },
+    {
+      "check": "no duplicate qrel rows",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no query appears in both train and test qrels",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "evidence sentence indices are within the abstract",
+      "status": "PASS",
+      "detail": "0 pairs out of range"
+    },
+    {
+      "check": "all evidence spans located in doc_text",
+      "status": "PASS",
+      "detail": "0 pairs with unlocated spans"
+    },
+    {
+      "check": "doc_text[char_start:char_end] == evidence sentence",
+      "status": "PASS",
+      "detail": "0 mismatches"
+    },
+    {
+      "check": "one label per (claim, doc) pair",
+      "status": "PASS",
+      "detail": "0 pairs with mixed labels"
+    },
+    {
+      "check": "every evidence annotation (mapped splits) appears in BEIR qrels",
+      "status": "PASS",
+      "detail": "0 annotated pairs not in qrels"
+    },
+    {
+      "check": "every rationale-free qrel pair is a cited doc of its claim",
+      "status": "PASS",
+      "detail": "485 such pairs, 0 not cited \u2014 kept for retrieval eval, excluded from the evidence diagnostic"
+    }
+  ],
+  "release_note": "A clean-clone top-to-bottom rerun is still required before submission."
+}
