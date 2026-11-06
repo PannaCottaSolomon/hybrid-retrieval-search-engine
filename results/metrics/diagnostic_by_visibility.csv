@@ -1,0 +1,16 @@
+visibility,method,n_pairs,hit_rate_at_10
+complete,bm25,93,0.9139784946236559
+complete,hybrid_prefix,93,0.956989247311828
+complete,hybrid_window,93,0.9354838709677419
+complete,prefix_minilm,93,0.8924731182795699
+complete,window_minilm,93,0.8602150537634409
+partial,bm25,65,0.8923076923076924
+partial,hybrid_prefix,65,0.9538461538461539
+partial,hybrid_window,65,0.9692307692307692
+partial,prefix_minilm,65,0.9230769230769231
+partial,window_minilm,65,0.9538461538461539
+absent,bm25,51,0.9411764705882353
+absent,hybrid_prefix,51,0.9607843137254902
+absent,hybrid_window,51,0.9411764705882353
+absent,prefix_minilm,51,0.8823529411764706
+absent,window_minilm,51,0.9215686274509803

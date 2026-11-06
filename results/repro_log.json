@@ -1,0 +1,211 @@
+{
+  "created_utc": "2026-11-06T06:26:44+00:00",
+  "config": {
+    "SEED": 42,
+    "K": 10,
+    "RUN_DEPTH": 1000,
+    "MODEL_NAME": "sentence-transformers/all-MiniLM-L6-v2",
+    "MAX_SEQ_LEN": 256,
+    "DOC_SEP": " ",
+    "ALPHA_GRID": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "METHODS": [
+      "bm25",
+      "prefix_minilm",
+      "window_minilm",
+      "hybrid_prefix",
+      "hybrid_window"
+    ],
+    "SPLITS": [
+      "train",
+      "test"
+    ]
+  },
+  "environment": {
+    "timestamp_utc": "2026-11-06T06:11:55+00:00",
+    "python": "3.12.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "cpu_count": 8,
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "torch": "2.15.0+cpu",
+    "cuda": null,
+    "mps": false,
+    "transformers": "5.22.1",
+    "sentence_transformers": "6.2.0",
+    "rank_bm25": null
+  },
+  "split_map_beir_to_original": {
+    "train": "train",
+    "test": "dev"
+  },
+  "files": {
+    "results\\runs\\bm25__train.parquet": {
+      "sha256": "857a86fe2d57c9143660558316bb575c41ade5264c3cb2d186ca651b54543f02",
+      "size_bytes": 7733403
+    },
+    "results\\runs\\bm25__test.parquet": {
+      "sha256": "f75dd5f173f435e1545e3477cd7116fb1c2aa2b841e868d4fd44d7cd6608c176",
+      "size_bytes": 2908285
+    },
+    "results\\runs\\prefix_minilm__train.parquet": {
+      "sha256": "aea531fdc1b3aedf18c24d712b7f76938b5df77d3808698a7490602355d68e8e",
+      "size_bytes": 6420991
+    },
+    "results\\runs\\prefix_minilm__test.parquet": {
+      "sha256": "9285cb8deef0c5156132a5fcacf1ca8f7b7bf5594f0ac8d469c67c0f02a43388",
+      "size_bytes": 2580889
+    },
+    "results\\runs\\window_minilm__train.parquet": {
+      "sha256": "95724c9d0888ddd2ebbc7b595553365fe0dbf9c928b5a998350765120846d6f5",
+      "size_bytes": 6407708
+    },
+    "results\\runs\\window_minilm__test.parquet": {
+      "sha256": "3417c6b7fbc51dc97caf911adfab210ca2f7c4dfebd75e467d7e7ca9cc6e36ca",
+      "size_bytes": 2575856
+    },
+    "results\\runs\\hybrid_prefix__train.parquet": {
+      "sha256": "0ccc94091f3417f2ac1358a7b15f1cef51eb30d1d1528a240ef31b8576412684",
+      "size_bytes": 8228995
+    },
+    "results\\runs\\hybrid_prefix__test.parquet": {
+      "sha256": "121d8aa229935d2c0ba46dd9fd13c5ed52878b2d75d754d64164483ab791d551",
+      "size_bytes": 3242231
+    },
+    "results\\runs\\hybrid_window__train.parquet": {
+      "sha256": "9cd9c9da6e3b01d5b23fc90740fda41415575e78343b540a2aba9d4639fe19ca",
+      "size_bytes": 8227060
+    },
+    "results\\runs\\hybrid_window__test.parquet": {
+      "sha256": "bc7399a45dce947872f96458cce03f78b851d3dbc8b410d66b386a795b93cc9f",
+      "size_bytes": 3242277
+    },
+    "results\\frozen_alphas.json": {
+      "sha256": "c9455fbbe4116e724df4b89ae6339c3e2f648b0a4763488ddc171fb5393befd1",
+      "size_bytes": 216
+    },
+    "results\\metrics\\alpha_sweep.parquet": {
+      "sha256": "98769b17a9659dc7e05230dc3dbbb713505babeba910d4bbbf095ce9aafa137d",
+      "size_bytes": 3873
+    },
+    "results\\efficiency\\efficiency_log.jsonl": {
+      "sha256": "a0a832b69e7c8a3486095509d63caef074492f78bf8cfda88ed050427f2fd3d6",
+      "size_bytes": 4417
+    },
+    "results\\metrics\\per_query__test.parquet": {
+      "sha256": "c89dcbab95d8d360b997da94b55f03256f46bbbef478aed7ecc3865d7340ad5a",
+      "size_bytes": 7065
+    },
+    "results\\metrics\\summary__test.csv": {
+      "sha256": "2be90f878d63338e8c18d8444542846acca4223a6f7642adf10708daae1a47a9",
+      "size_bytes": 297
+    },
+    "results\\metrics\\efficiency_summary.csv": {
+      "sha256": "210c03c1c193203957894cdbf514b429772278217e8cd00a74e4b20437c14f3b",
+      "size_bytes": 1086
+    },
+    "results\\metrics\\bootstrap_ci.csv": {
+      "sha256": "6e99a6acc97b7280f169db7f00d71df86c0085182fc3ffc5ac478971da6b41a6",
+      "size_bytes": 1499
+    },
+    "results\\metrics\\final_table.csv": {
+      "sha256": "d8d83987ae9f9f01b754eb368386915f0ca180db2993f3363a8e54ac3b3c1f83",
+      "size_bytes": 1375
+    },
+    "results\\metrics\\diagnostic_records.parquet": {
+      "sha256": "d019a01b1fb52315cc64a7e45ffc6a4bb100b3e1e85b85f8a667985bdf726a5c",
+      "size_bytes": 137122
+    },
+    "results\\demo_manifest.json": {
+      "sha256": "8cdedfbd7609da4f171202648083eccada88eb1e68a8f7bd50b273b76cba4672",
+      "size_bytes": 952
+    },
+    "results\\figures\\test_metrics_with_ci.png": {
+      "sha256": "6ce839edf396da2bfc64122967fb20d5302c6721ec73ccb1b32bb1fe76a0814a",
+      "size_bytes": 85418
+    },
+    "results\\figures\\accuracy_latency_tradeoff.png": {
+      "sha256": "c30ff5a6b5c4b2e4f058962f3a0258ca6c55c68bd101926a5b035feef52f79e5",
+      "size_bytes": 54812
+    },
+    "results\\figures\\visibility_recovery.png": {
+      "sha256": "4db1cc9547457e1f170d07f0fbd9df229e673211b697c731ed879b36fbfeed5e",
+      "size_bytes": 61171
+    }
+  },
+  "checks": [
+    {
+      "check": "frozen tokeniser is the best on train nDCG@10",
+      "status": "PASS",
+      "detail": "best on train: alnum+stop+stem"
+    },
+    {
+      "check": "BM25 index covers every doc",
+      "status": "PASS",
+      "detail": "5183 vs 5183"
+    },
+    {
+      "check": "no empty tokenised documents",
+      "status": "PASS",
+      "detail": "0 empty docs"
+    },
+    {
+      "check": "bm25/train: every query matches at least one doc",
+      "status": "PASS",
+      "detail": "0 queries with all-zero scores"
+    },
+    {
+      "check": "bm25/test: every query matches at least one doc",
+      "status": "PASS",
+      "detail": "0 queries with all-zero scores"
+    },
+    {
+      "check": "test Recall@10 close to proposal pilot (0.776)",
+      "status": "WARN",
+      "detail": "0.8202"
+    },
+    {
+      "check": "test nDCG@10 close to proposal pilot (0.652)",
+      "status": "WARN",
+      "detail": "0.6842"
+    },
+    {
+      "check": "docs that fit in one window get exactly one window",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "every window has <= WINDOW_SIZE word-pieces",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "windows of a document are contiguous and in DOC_IDS order",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "last window of every document reaches the end of the text",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "single-window docs match the prefix embedding",
+      "status": "PASS",
+      "detail": "min cosine = 1.000000"
+    }
+  ],
+  "release_note": "A clean-clone top-to-bottom rerun is still required before submission."
+}

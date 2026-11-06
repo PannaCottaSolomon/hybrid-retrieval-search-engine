@@ -5,15 +5,15 @@
 # Core
 numpy>=1.26
 pandas>=2.1
-pyarrow>=14          # parquet files in data/processed and results/runs
+pyarrow>=14          
 matplotlib>=3.8
 tqdm>=4.66
 scikit-learn>=1.5
 
 # Retrieval
-rank-bm25==0.2.2                 # Member 3
-sentence-transformers>=3.0       # Members 4, 5 (all-MiniLM-L6-v2)
-transformers>=4.40               # tokenizer offsets for the truncation diagnostic
+rank-bm25==0.2.2                
+sentence-transformers>=3.0      
+transformers>=4.40               
 torch>=2.2
 nltk>=3.9
 
@@ -21,9 +21,9 @@ nltk>=3.9
 datasets>=2.19
 
 # Stats / demo
-scipy>=1.11                      # Member 6 (bootstrap helpers, optional)
-streamlit>=1.35                  # Member 6 demo
+scipy>=1.11                     
+streamlit>=1.35                 
 
 # Notebook + git hygiene
 jupyter
-nbstripout                       # strips outputs before commit -> fewer merge conflicts
+nbstripout                       

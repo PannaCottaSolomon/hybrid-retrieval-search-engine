@@ -15,7 +15,7 @@ nbstripout --install                                  # once per clone: strips n
 jupyter lab LibBOT_pipeline.ipynb
 ```
 
-Run **Section 1**, then either **Section 2** (downloads SciFact and rebuilds `data/processed/`) or **Checkpoint A** (loads the committed `data/processed/`), then your own section.
+Run **Section 1**, then either **Section 2** (downloads SciFact and rebuilds `data/processed/`) or **Checkpoint A** (loads the committed `data/processed/`). Run Sections **3–7** to build the methods and rankings, then run **Section 7.4** to remeasure all five methods with one warm-up/repetition protocol, followed by Sections **8–10** to refresh final metrics, charts, demo checks, and the reproducibility log. Section 7.4 requires the live indexes/models and cached document embeddings created by Sections 3–5.
 
 ## Repo layout
 
@@ -38,18 +38,18 @@ libbot/
 
 ## Who owns what
 
-| § | Section | Owner |
-|---|---|---|
-| 1 | Setup, config, shared helpers, data contract | Member 1 |
+| § |                        Section                        |   Owner  |
+|---|-------------------------------------------------------|----------|
+| 1 | Setup, config, shared helpers, data contract          | Member 1 |
 | 2 | Dataset loading + claim → document → evidence mapping | Member 2 |
-| 3 | BM25 baseline | Member 3 |
-| 4 | Prefix MiniLM | Member 4 |
-| 5 | Windowed MiniLM | Member 5 |
-| 6 | Truncation / evidence-retention diagnostic | Members 2 + 5 |
-| 7 | Hybrid fusion + α tuning | Member 6 |
-| 8 | Final evaluation (quality + efficiency) | Member 1 |
-| 9 | Bootstrap CIs, results table, charts | Member 6 |
-| 10 | Demo export, reproducibility log | Members 6, 1 |
+| 3 | BM25 baseline                                         | Member 3 |
+| 4 | Prefix MiniLM                                         | Member 4 |
+| 5 | Windowed MiniLM                                       | Member 5 |
+| 6 | Truncation / evidence-retention diagnostic            | Member 2 |
+| 7 | Hybrid fusion + α tuning                              | Member 6 |
+| 8 | Final evaluation (quality + efficiency)               | Member 1 |
+| 9 | Bootstrap CIs, results table, charts                  | Member 6 |
+| 10 | Demo export, reproducibility log                     | Member 5 |
 
 ## Data contract (summary; full version in notebook Section 1)
 
