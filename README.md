@@ -38,18 +38,18 @@ libbot/
 
 ## Who owns what
 
-| § | Section | Owner |
-|---|---|---|
-| 1 | Setup, config, shared helpers, data contract | Member 1 |
+| § |                        Section                        |   Owner  |
+|---|-------------------------------------------------------|----------|
+| 1 | Setup, config, shared helpers, data contract          | Member 1 |
 | 2 | Dataset loading + claim → document → evidence mapping | Member 2 |
-| 3 | BM25 baseline | Member 3 |
-| 4 | Prefix MiniLM | Member 4 |
-| 5 | Windowed MiniLM | Member 5 |
-| 6 | Truncation / evidence-retention diagnostic | Members 2 + 5 |
-| 7 | Hybrid fusion + α tuning | Member 6 |
-| 8 | Final evaluation (quality + efficiency) | Member 1 |
-| 9 | Bootstrap CIs, results table, charts | Member 6 |
-| 10 | Demo export, reproducibility log | Members 6, 1 |
+| 3 | BM25 baseline                                         | Member 3 |
+| 4 | Prefix MiniLM                                         | Member 4 |
+| 5 | Windowed MiniLM                                       | Member 5 |
+| 6 | Truncation / evidence-retention diagnostic            | Member 2 |
+| 7 | Hybrid fusion + α tuning                              | Member 6 |
+| 8 | Final evaluation (quality + efficiency)               | Member 1 |
+| 9 | Bootstrap CIs, results table, charts                  | Member 6 |
+| 10 | Demo export, reproducibility log                     | Member 5 |
 
 ## Data contract (summary; full version in notebook Section 1)
 
