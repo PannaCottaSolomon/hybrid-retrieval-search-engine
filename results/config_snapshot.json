@@ -32,11 +32,11 @@
     ]
   },
   "environment": {
-    "timestamp_utc": "2026-11-05T02:50:52+00:00",
-    "python": "3.13.0",
-    "platform": "Windows-11-10.0.26300-SP0",
-    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
-    "cpu_count": 16,
+    "timestamp_utc": "2026-11-06T06:11:55+00:00",
+    "python": "3.12.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "cpu_count": 8,
     "numpy": "2.5.4",
     "pandas": "3.1.1",
     "torch": "2.15.0+cpu",
