@@ -15,6 +15,8 @@ nbstripout --install                                  # once per clone: strips n
 jupyter lab LibBOT_pipeline.ipynb
 ```
 
+**macOS + python.org Python:** if Section 2.1 fails with `CERTIFICATE_VERIFY_FAILED`, Python has no root certificates. Run `/Applications/Python\ 3.x/Install\ Certificates.command` once, or start Jupyter with `SSL_CERT_FILE=$(python -m certifi) jupyter lab LibBOT_pipeline.ipynb`. (Section 2.1 also falls back to the Hugging Face copies of both datasets.)
+
 Run **Section 1**, then either **Section 2** (downloads SciFact and rebuilds `data/processed/`) or **Checkpoint A** (loads the committed `data/processed/`). Run Sections **3–7** to build the methods and rankings, then run **Section 7.4** to remeasure all five methods with one warm-up/repetition protocol, followed by Sections **8–10** to refresh final metrics, charts, demo checks, and the reproducibility log. Section 7.4 requires the live indexes/models and cached document embeddings created by Sections 3–5.
 
 ## Repo layout
