@@ -32,17 +32,17 @@
     ]
   },
   "environment": {
-    "timestamp_utc": "2026-11-06T06:11:55+00:00",
-    "python": "3.12.1",
-    "platform": "Windows-11-10.0.26200-SP0",
-    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
-    "cpu_count": 8,
+    "timestamp_utc": "2026-11-08T12:13:03+00:00",
+    "python": "3.13.7",
+    "platform": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "cpu_count": 10,
     "numpy": "2.5.4",
     "pandas": "3.1.1",
-    "torch": "2.15.0+cpu",
+    "torch": "2.15.0",
     "cuda": null,
-    "mps": false,
-    "transformers": "5.22.1",
+    "mps": true,
+    "transformers": "5.22.2",
     "sentence_transformers": "6.2.0",
     "rank_bm25": null
   }
