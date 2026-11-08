@@ -9,16 +9,16 @@
     "hybrid_window"
   ],
   "inputs": {
-    "corpus": "data\\processed\\corpus.parquet",
-    "queries": "data\\processed\\queries.parquet",
-    "qrel_pairs": "data\\processed\\qrel_pairs.parquet",
-    "evidence_sentences": "data\\processed\\evidence_sentences.parquet",
-    "frozen_alphas": "results\\frozen_alphas.json",
-    "bm25__test": "results\\runs\\bm25__test.parquet",
-    "prefix_minilm__test": "results\\runs\\prefix_minilm__test.parquet",
-    "window_minilm__test": "results\\runs\\window_minilm__test.parquet",
-    "hybrid_prefix__test": "results\\runs\\hybrid_prefix__test.parquet",
-    "hybrid_window__test": "results\\runs\\hybrid_window__test.parquet"
+    "corpus": "data/processed/corpus.parquet",
+    "queries": "data/processed/queries.parquet",
+    "qrel_pairs": "data/processed/qrel_pairs.parquet",
+    "evidence_sentences": "data/processed/evidence_sentences.parquet",
+    "frozen_alphas": "results/frozen_alphas.json",
+    "bm25__test": "results/runs/bm25__test.parquet",
+    "prefix_minilm__test": "results/runs/prefix_minilm__test.parquet",
+    "window_minilm__test": "results/runs/window_minilm__test.parquet",
+    "hybrid_prefix__test": "results/runs/hybrid_prefix__test.parquet",
+    "hybrid_window__test": "results/runs/hybrid_window__test.parquet"
   },
   "note": "The Streamlit app reads Parquet inputs directly; no model download is needed for saved-run browsing."
 }
